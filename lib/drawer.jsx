@@ -214,16 +214,15 @@ export default class Drawer extends React.Component {
                   {isFunction(children)
                     ? children(interpolated.myProp)
                     : children}
-
-                  {!this.isClosed() &&
-                    <Hammer
-                      style={overlay}
-                      className={overlayClassName}
-                      onTap={this.onOverlayTap}
-                    >
-                      <span />
-                    </Hammer>}
                 </div>
+                {!this.isClosed() &&
+                  <Hammer
+                    style={overlay}
+                    className={overlayClassName}
+                    onTap={this.onOverlayTap}
+                  >
+                    <span />
+                  </Hammer>}
               </div>
             </Hammer>
           );
